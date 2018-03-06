@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- My Styles -->
+    <link rel="stylesheet" href="css/myStyles.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Materialize and OMDb</title>
+  </head>
+
+  <body>
+
+    <!-- Header Section -->
+    <header class="deep-orange darken-2">
+      <div class="container">
+        <p class="flow-text">Materalize & OMDb</p>
+      </div>
+    </header>
+
+    <main class="mtop">
+      <!-- Search Field  -->
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <nav class="deep-orange">
+              <div class="nav-wrapper">
+                <form id="submit">
+                  <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Results Container -->
+      <div class="container movie-cards"></div>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal deep-orange">
+        <div class="col s12">
+          <h4 class="header left flow-text">Horizontal Card</h4>
+          <h4 class="right flow-text director">Director</h4>
+          <div class="clearfix"></div>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/">
+            </div>
+            <div class="card-stacked">
+              <div class="progress amber lighten-4">
+                <div class="determinate amber lighten-1" style="width:75%">IMDb Rating</div>
+              </div>
+              <div class="card-content">
+                <p class="rated left">PG-13</p>
+                <div class="runtime right">123min</div>
+                <div class="clearfix"></div>
+                <p class="writers emphasis">Writers</p>
+                <p class="actors emphasis">Actors</p>
+                <div class="genre emphasis">Genre</div>
+                <p class="plot">I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn deep-orange" id="website" target="_blank">Website</a>
+                <a class="waves-effect waves-light btn deep-orange" id="imdbsite" target="_blank">IMDB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer deep-orange darken-2">
+      <div class="container">
+        <p class="left">Created By <a href="http://www.donmck.com/" target="_blank"><span id="bolder">Donny McKercher</span></a></p>
+        <p class="right">Using <a href="http://next.materializecss.com/" target="_blank"><span id="bolder">Materialize</span></a> 1.0 Alpha and <a href="http://www.omdbapi.com/" target="_blank"><span id="bolder">OMDB Api</span></a> for the movie data.</p>
+        <div class="clearfix"></div>
+      </div>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      var elem = document.querySelector(".modal");
+      var instance = new M.Modal(elem);
+    </script>
+    <script src="js/getOmdb.js"></script>
+  </body>
+</html>

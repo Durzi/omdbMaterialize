@@ -1,0 +1,162 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Materialize - To keep footer always at the bottom of the screen
+** Body and main
+*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Header font options and padding */
+header p {
+  margin: 0;
+  padding: 1rem;
+}
+
+header .flow-text {
+  color: #fff;
+  font-weight: 500;
+}
+
+ /* Materialize - Changes bottom border of focused input elements */
+ .row .input-field input:focus {
+   border-bottom: 3px solid #ff8a65 !important;
+   box-shadow: 0 1px 0 0 transparent !important;
+ }
+
+/* Materialize - Changes font color and border of input elements */
+ .row .input-field input {
+   color: #000;
+   border-bottom: 3px solid #ff8a65;
+   box-shadow: 0 1px 0 0 transparent;
+ }
+
+ /* Materialize - Moves the positions of the icons inside input */
+ nav .input-field label {
+   top: -12px;
+ }
+
+/* Space between header and main */
+.mtop {
+  margin-top: 1em;
+}
+
+/* Materialize - Controlling size of the gutters inbetween colums and rows */
+.row .col {
+  padding: 0 .5rem;
+}
+
+.card {
+  margin: .5rem 0;
+}
+
+/* Keeps all the images from OMDB API the same height */
+.movie-cards .row .col .card .card-image img {
+  height: 390px;
+}
+
+/* Makes the card title more visible with background */
+.movie-cards .card .card-image .card-title {
+  background: linear-gradient(to bottom, rgba(255, 87, 34, 0), rgba(255, 87, 34, 1));
+  width: 100%;
+  font-weight: 400;
+  margin: 0;
+  padding: .5rem;
+  text-align: center;
+}
+
+/* Position button inside card to the top instead of the bottom */
+.movie-cards .card .card-image .btn {
+  bottom: inherit;
+  top: 24px;
+}
+
+/* Materialize - Decreased the size of margin inbetween each row
+** Last row 1rem (same as first row top-margin)                */
+.row {
+  margin-bottom: 0;
+}
+
+.row:last-child {
+  margin-bottom: 1rem;
+}
+
+/* Materialize - Remove margin of card class */
+.modal .card {
+  margin: 0;
+}
+
+/* Make Footer Anchors stand out more */
+#bolder {
+  font-weight: bolder;
+  color: #fff;
+}
+
+/* Chrome AutoComplete Background Color Change */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Puts margin top on movie-cards */
+.movie-cards {
+  margin-top: 1rem;
+}
+
+/* Modal button margin */
+.modal .btn {
+  margin-bottom: .5rem;
+}
+
+/* Materalize - hover effect */
+.hoverable:hover {
+  -webkit-box-shadow: 4px 6px 20px 5px rgba(0,0,0,.19);
+  box-shadow: 4px 6px 20px 5px rgba(0,0,0,.19);
+  transform: translateY(-2px);
+  transition: all 500ms ease;
+}
+
+/* Modal - IMDB Rating in form of Materalize Progress/Determinate */
+.modal .progress {
+  margin: 0;
+  height: 15px;
+  line-height: 1.2;
+  color: #fff;
+  font-size: 12px;
+}
+
+.modal .determinate {
+  padding-left: 2px;
+}
+
+.modal .flow-text {
+  margin: 1rem .5rem;
+  color: #fff;
+}
+
+/* Modal Font Layout Styling */
+.modal .card .card-content {
+  padding: .5rem 1.5rem;
+}
+
+.modal .card .runtime {
+  margin-bottom: 1rem;
+}
+
+.modal .card .card-content .emphasis {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
